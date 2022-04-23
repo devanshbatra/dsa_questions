@@ -49,7 +49,7 @@ int main(){
     return 0;
 }
 
-// Use case: It is an adaptable algorithm - things start getting sorted for the very start.
+// Use case: It is an adaptable algorithm - things start getting sorted from the very start.
 // It is stable
 // also used with small sized arrays
 

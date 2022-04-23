@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-// Painters partition problem - solved on codestudio
+// https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559
 
 bool isPossibleSol(vector<int> a, int n, int m, int mid){
     int blSum=0, painterCount = 1;

@@ -1,31 +1,9 @@
-// find pivot in sorted - rotated array
+// find pivot in sorted - rotated aay
 #include <iostream>
 #include <vector>
 
 using namespace std;
-    int findPivot(vector<int>& arr, int n, int l, int h){
-        if(l<=h){
-            int mid=h+(l-h)/2;
-            int left = arr[mid-1], right = arr[mid+1];
-            if(arr[mid]>arr[0]){ //means on first part
-                l=mid+1;
-                findPivot(arr, n,l,h);
-            }else{
-                if(arr[mid]<left){
-                    return mid;
-                }else{
-                    h=mid-1;
-                    findPivot(arr, n, l, h);
-                }
-            }
-        }else return -1;
-    }
-
-    int findPivotSimple(vector<int>& arr, int n, int l, int h){
-
-    }
-    
-    int main() {
+        int main() {
         cout<<"enter the size";
         int n;
         cin>>n;
@@ -37,20 +15,25 @@ using namespace std;
             a.push_back(el);
         }
         int l=0, h=n-1;
-        int index = findPivot(a, n, l, h);
-
-        // simple method
         int mid = l + (h-l)/2;
-        while(l<h){
-            if(a[mid]>=a[0]){
+        int ans = -1;
+        // simple method - best method 100% accurate - recursion se ye possible nhi ho paya 
+        if(a[l]<=a[h])  ans = a[l];
+        while(l<=h){
+            if(a[mid]>a[0]){
                 l=mid+1;
             }else{
-                h=mid;
+                if(a[mid]<a[mid-1]){
+                    ans = a[mid];
+                    break;
+                }else{
+                    h=mid-1;
+                }
             }
-            mid = l+(h-l)/2;
+            mid = h + (l-h)/2;
         }
-        cout<<"pivot by your func: "<<a[index]<<endl;
-        cout<<"pivot by simp func: "<<a[l];
+        // cout<<"pivot by your func: "<<a[index]<<endl;
+        cout<<"pivot by simp func: "<<ans;
 
         return 0;
         

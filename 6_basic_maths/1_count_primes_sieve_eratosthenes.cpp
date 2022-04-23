@@ -4,6 +4,7 @@
 // if we do by brute force approach then it will be n^2 time complexity and will give the
 
 // so we use sieve of eratosthenes here
+// it works on eleminating/removing our search space values before proceeding to next steps.
 /*
 1. make the search space and mark every number as prime 
 2. ab starting 2 se shuru karo , jo prime ke table me aa rhe hai unko non prime mark kardo
@@ -14,20 +15,7 @@
 
 using namespace std;
 
-void printVec(vector<int> v){
-    for(auto i: v){
-        cout<<i<<" ";
-    }cout<<endl;
-}
 
-int countOnes(vector<int> v){
-    int count=0;
-    for(auto i: v){
-        if(i==1) count++;
-    }
-
-    return count;
-}
 
 int main(){
 
@@ -45,8 +33,13 @@ int main(){
         }
     }
     
-    
     cout<<count;
 
     return 0;
 }
+
+/*
+time complexity - n/2 + n/3 + n/4-------
+n * harmonic progression of prime numbers
+==> n*log(log(n))
+*/

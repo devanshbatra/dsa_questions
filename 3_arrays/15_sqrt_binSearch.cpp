@@ -9,7 +9,7 @@ have to return 2 only. So this is a very good approach to store this possible so
 whenever we get this possible solution ans will be updated
 if mid X mid = n then it is a match return it.
 
-CONCEPT: -finding solution  minimizing the search space
+CONCEPT: -finding solution by minimizing the search space
 */
 #include <iostream>
 
