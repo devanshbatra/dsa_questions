@@ -46,6 +46,44 @@ void reverseList(Node* & head){
     head = prev;
 }
 
+//recursive method 
+void reverseListRec(Node* & head, Node * curr, Node * prev){
+    //base case
+    if(curr==NULL){
+        head=prev;
+        return;
+    }
+    //processing 
+    Node* temp = curr->next;
+    curr->next = prev;
+    prev=curr;
+    curr=temp;
+
+    //recursive call
+    reverseListRec(head, curr, prev);
+}
+
+// recursive approach 2nd - requires only head pointer.
+// this function will return the head of the reversed list, seen from lecture no. 45, 20:00.
+// bilkul deep mein sochna he nhi hai, tum sirf last step ka dekh lo baaki recursion apne aap kr lega.
+Node* reverse1(Node * head){
+    //base case
+    if(head==NULL || head->next==NULL){
+        return head;
+    }
+
+    Node* chotahead = reverse1(head->next);
+
+    //now we need to do two works is already reversed list ke first element ke next ko head pe point karana
+    //hai and head ko null pe
+    //is tarah is step wala head bhi choti reverse linked list ka hissa ban jayega and in sabka head -
+    // will be the chotahead, so return chotahead at end.
+    head->next->next = head;
+    head->next = NULL;
+
+    return chotahead; 
+}
+
 int main(){
     Node * head = NULL;
 
@@ -59,6 +97,18 @@ int main(){
     printList(head);
     reverseList(head);
     cout<<"After reversal: "<<endl;
+    printList(head);
+
+    // recursive method
+    Node* curr = head;
+    Node* prev = NULL;
+    reverseListRec(head, curr, prev);
+    cout<<"Again reversed using recursive approach: "<<endl;
+    printList(head);
+
+    // recursive method 2
+    cout<<"Again reversed using recursive approach number 2 "<<endl;
+    head = reverse1(head);
     printList(head);
     
 
