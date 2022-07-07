@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-//merge two sorted linked list.
 
 class Node{
     public:
@@ -9,7 +8,7 @@ class Node{
 
         Node(int d){
             data = d;
-            next = NULL; // similar to ---> (*this).next;
+            this->next = NULL; // similar to ---> (*this).next;
         }
 
         // destructor - will be called automatically when we free the memory for a node.
@@ -106,9 +105,8 @@ class Stack{
         }
 
         bool empty(){
-            if(tail==NULL){
-                return true;
-            }else return false;
+            if(tail==NULL) return true;
+            else return false;
         }
 };
 

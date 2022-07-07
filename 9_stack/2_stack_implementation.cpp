@@ -23,7 +23,7 @@ class Stack{
         }
 
         //methods
-        int push(int ele){
+        void push(int ele){
             if(size-top>1){
                 top++;
                 arr[top] = ele;
@@ -32,7 +32,7 @@ class Stack{
             }
         }
 
-        int pop(){
+        void pop(){
             if(top>=0){
                 top--;
             }else{
@@ -93,4 +93,4 @@ https://www.codingninjas.com/codestudio/problems/two-stacks_983634?leftPanelTab=
 -One approach would be to divide the array into two halves but it will waste much of the space.
 -The best approach is to start first stack allocation from start and 2nd array allocation from end.
 
-*/
+*/ 

@@ -3,6 +3,8 @@
 #include<string>
 using namespace std;
 
+//use recursion to delete the middle element of the stack
+
 void deleteMiddle(stack<int> &s, int size, int count){
     //base case
     if(count == size/2){
@@ -23,12 +25,21 @@ void deleteMiddle(stack<int> &s, int size, int count){
     s.push(store);
 }
 
+void printStack(stack<int> s){
+    while(!s.empty()){
+        cout<<s.top()<<" ";
+        s.pop();
+    }cout<<endl;
+}
+
 int main(){
     stack<int> s;
     s.push(4);
     s.push(5);
     s.push(2);
     s.push(9);
+
+    printStack(s);
 
     //we know that we cannot access the middle element of the node without deleting the elements above it.
     //so we will use a recursive approach and reach the middle element (size/2) by removing the upper elements
@@ -41,10 +52,7 @@ int main(){
 
 
 
-    while(!s.empty()){
-        cout<<s.top()<<" ";
-        s.pop();
-    }cout<<endl;
+    printStack(s);
 
     return 0;
 }

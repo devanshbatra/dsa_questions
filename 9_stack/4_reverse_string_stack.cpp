@@ -2,6 +2,7 @@
 #include<stack>
 #include<string>
 using namespace std;
+//to reverse a string using stack
 int main(){
     cout<<"Enter the string: ";
     string st;
