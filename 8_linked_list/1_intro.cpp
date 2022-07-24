@@ -6,7 +6,7 @@ using namespace std;
 class Node{
     public:
         int data;
-        Node* next;
+        Node* next; //ye ek pointer hai jo kisi Node ko point karega, isiliye iska type Node* hai.
 
         Node(int d){
             data = d;
@@ -37,6 +37,10 @@ void printList(Node* &head){
 void insertAtHead(Node* &head, int d){
     //creating a new node for the given data
     Node* temp = new Node(d);
+    if(head==NULL){
+        head = temp;
+        return;
+    }
     temp->next = head;
     head = temp;
 }
