@@ -108,7 +108,7 @@ bool checkCircular(Node * head){
 //approach 2 : <<<<using maps>>>>
 //ham map<node*, bool> type ka banayenge aur ye store krte jayenge ki wo node visited hai ke nhi.
 //jaisi he aisi map milti hai jo visited hai then we return true.
-//aur jaise he aisi node milti hai jo NULL hai then return false.
+//aur jaise he aisi node milti hai jo NULL hai then return false.s
 bool checkCircularMap(Node* head){
     if(head==NULL) return true;
     map<Node*, bool> store;
@@ -129,7 +129,7 @@ int main(){
     //inserting in empty list
     insertAfterValue(tail, 5, 3);
     insertAfterValue(tail, 3, 5);
-    insertAfterValue(tail, 5, 6);
+    inertAfterValue(tail, 5, 6);
     insertAfterValue(tail, 6, 8); 
     insertAfterValue(tail, 3, 4);//inserted after 3
     insertAfterValue(tail, 8, 9);

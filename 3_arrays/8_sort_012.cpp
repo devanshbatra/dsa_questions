@@ -1,5 +1,6 @@
 // sorting an array containing only 0 1 and 2
 // Can be done in less than o(nlogn) which is required in normal sorting.
+//can also be done with hash map or (counting approach) but hash map solutions are not accepted everywhere and counting approach requires two for loops
 // Using TWO POINTER APPROACH
 #include<iostream>
 #include<vector>

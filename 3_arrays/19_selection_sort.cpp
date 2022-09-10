@@ -1,6 +1,6 @@
 // selection sort
-// here we have rounds pf competition
-// take an element, use aur uske aage ke array ka lowest element find karo aur usse replace kardo
+// here we have rounds of competition
+// take an element, usse aur uske aage ke array ka lowest element find karo aur usse replace kardo
 // Now increase that element index
 
 // space complexity - we are just declaring variables and not any dynamic arrays during algo so O(1)

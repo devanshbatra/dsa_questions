@@ -29,7 +29,7 @@ int partition(int arr[], int s, int e){
         }
         // cout<<i<<" "<<j<<endl;
         
-        // ab aisi condition aa gayi hai ki ya to i aur j pivot tak pahauch gaye hn ya phit swap karna padega
+        // ab aisi condition aa gayi hai ki ya to i aur j pivot tak pahauch gaye hn ya phir swap karna padega kyuki i pivot se bada h aur j pivot se chota h
         if(i<pivotIndex && j>pivotIndex )
             swap(arr[i++], arr[j--]);   
     }
@@ -42,9 +42,9 @@ void quick_sort(int arr[], int s, int e){
     //base case
     if(s>=e) return ;
 
-    int p = partition(arr, s, e);
+    int p = partition(arr, s, e);//isse pivot ke left mein pivot se chote aur pivot ke right mein pivot se bade elements aa jayenge
     
-    //recursive call 
+    //recursive call - now call quick sort for both the halves.
     quick_sort(arr, s, p-1);
     quick_sort(arr, p+1, e);
 }

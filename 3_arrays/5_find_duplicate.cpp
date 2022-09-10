@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//brute force method
 void findDuplicate(int arr[], int n){
     for(int i=0; i<n; i++){
         int key=arr[i], flag=0;

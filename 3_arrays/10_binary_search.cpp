@@ -4,26 +4,28 @@
 
 using namespace std;
 
-int binSearch(vector<int> a, int h, int l, int k){
-    cout<<"l and h: "<<l<<" "<<h<<endl;
-    int ans=0;
-    if(l<=h){
-        int mid = (h+l)/2;
-        if(a[mid]==k){
-            cout<<"found"<<endl;
-            return mid;
-        }
-        else if(a[mid]>k){
-            h=mid-1;
-            binSearch(a, h, l, k);
-        }else{
-            l=mid+1;
-            binSearch(a, h, l, k);
-        }
-    }else{
-        cout<<"not found"<<endl;
+int binSearch(vector<int> arr, int l, int h, int key)
+{
+
+    // base case
+    if (l > h)
         return -1;
+
+    //processing
+    int mid = l+ (h-l)/2;
+
+    if(arr[mid]==key) return mid;
+    
+    // recursive calls
+    if(arr[mid]>key){
+        h = mid-1;
+        binSearch(arr, l, h, key);
+    }else if(arr[mid]<key){
+        l = mid+1;
+        binSearch(arr, l, h, key);
     }
+
+
 }
 
 // integer overflow condition
@@ -48,10 +50,10 @@ int binSearch_int_over(vector<int> a, int h, int l, int k){
         }
         else if(a[mid]>k){
             h=mid-1;
-            binSearch(a, h, l, k);
+            binSearch_int_over(a, h, l, k);
         }else{
             l=mid+1;
-            binSearch(a, h, l, k);
+            binSearch_int_over(a, h, l, k);
         }
     }else{
         cout<<"not found"<<endl;

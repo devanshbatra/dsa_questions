@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//brute force
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {
 //     cout<<start<<endl;
