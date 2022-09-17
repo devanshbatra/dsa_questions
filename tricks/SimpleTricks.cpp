@@ -18,6 +18,13 @@
         take log
         log(27) = xlog(3);
         float x = log(27)/log(3);
-        now check if x is integer equivalent or not. 
+        now check if x is integer equivalent or not.
+
+3) If you have to return a pair then just return as :
+    return {2, 3};
+    This will work
+
+    Traditional method: pair<int, int> p = make_pair(2, 3);
+                        return p;
 
 */
