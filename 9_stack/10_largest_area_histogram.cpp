@@ -15,6 +15,8 @@ now find area covered by the formula right-left-1 for each element.
 this would require O(n^2) complexity.
 
 WHAT IF , we get the nextSmaller and prevSmaller elements for each element readymade , find how?
+
+
 */
 
 using namespace std;
@@ -51,7 +53,7 @@ vector<int> prevSmallerEle(vector<int> arr, int n){
     return ans;
 }
 // O(n)
-
+// This called array preprocessing, that is we made two auxiliary arrays before hand solving the problem.
 
 
 int largestRectangleArea(vector<int>& heights) {
@@ -96,3 +98,6 @@ int main(){
 
 // The final TC of the algorithm is O(n).x
 // also we have used singular stack everywhere (i.e. no nested data structures used ) so SC = O(n).
+
+
+//Now try this problem : https://leetcode.com/problems/trapping-rain-water/

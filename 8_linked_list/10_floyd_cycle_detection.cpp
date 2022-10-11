@@ -66,6 +66,8 @@ Node* floydCycleDetection(Node* head){
         if(fast!=NULL) fast = fast->next;
         
         if(fast==slow){
+            //now comes the main important step
+            //see photo.
             slow = head;
             while(fast!=slow){
                 fast=fast->next;

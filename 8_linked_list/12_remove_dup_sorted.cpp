@@ -111,3 +111,7 @@ int main(){
 // time complexity : saare nodes traverse kar rhe h - O(n).
 // space complexity: recursion to hai nhi aur koi extra data structure bhi use nhi kia
 // so O(1).
+
+
+//do this ques too , its famous as well as good: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+//found this in potd.
