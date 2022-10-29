@@ -27,4 +27,11 @@
     Traditional method: pair<int, int> p = make_pair(2, 3);
                         return p;
 
+4) When ever we use for(auto i: arr) 
+    and inside the loop suppose every element of arr is a string and inside the loop we change the string
+    then this change would not be there outside the loop end. (may be this invokes a function in behind which
+    is pass by value).
+
+    but if we use traditional for(int i=0; i<n; i++){}
+    then we would get exact changes done the the individual elements.
 */
