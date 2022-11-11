@@ -97,7 +97,7 @@ public:
                 Node* newnode = new Node(nums[minNode->row][(minNode->col)+1], minNode->row, (minNode->col)+1);
                 minheap.push(newnode);
                 maxi = max(maxi, nums[minNode->row][(minNode->col)+1]);
-            }else break;
+            }else break;//means koi sa arrays khatam ho gaya hai. ab koi sense nhi banta.
             
             
         }

@@ -5,7 +5,7 @@ using namespace std;
 In heap sort we would be given a random array and we would be asked to sort it.
 Steps:
 1) build a max heap using that array by calling heapify from n/2-1 to 0(as it is 0 based indexing)
-2) now steps to sort the array.
+2) now steps to sort the array. - BADE ELEMENT KO USKI SAHI JAGAH PAR LAGATE JAO BAS AUR HAR STEP KE BAAD HEAPIFY CALL KAR DO.
     i) swap arr[0] and arr[size] - take size = n-1 initially
     ii) size--;
     iii) place that arr[0] to its right position. using heapify(arr, size+1, 0); used size+1 since we 

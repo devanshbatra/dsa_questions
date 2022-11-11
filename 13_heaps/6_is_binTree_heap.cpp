@@ -37,7 +37,7 @@ int countNodes(Node* tree){
 
 //we will calculate the number of nodes
 //for 0 based indexing left = 2*i+1 and right=2*i+2
-//so if we find a node which on which left exists(Not NULL) and its left i.e 2*i+1 is
+//so if we find a node on which left exists(Not NULL) and its left i.e 2*i+1 is
 //>=number of nodes than it means it is leaving a gap in the tree so it is not a complete 
 //binary tree.
 
