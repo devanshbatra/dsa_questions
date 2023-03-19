@@ -1,7 +1,7 @@
 /*
 You have been given a string ‘STR’ containing either ‘{’ or ‘}’. 'STR’ is called valid if all the
  brackets are balanced. Formally for each opening bracket, there must be a closing bracket right to it.
-
+https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/
 https://www.codingninjas.com/codestudio/problems/minimum-cost-to-make-string-valid_1115770?leftPanelTab=0
 */
 
@@ -12,6 +12,37 @@ https://www.codingninjas.com/codestudio/problems/minimum-cost-to-make-string-val
 
 using namespace std;
 
+int minAddToMakeValid(string s) {
+    stack<char> stk;
+    int ans = 0;
+    for(auto & c: s){
+        if(c=='(') stk.push(c);
+
+        else if(c==')') {
+            if(stk.empty()){
+                ans++;
+                continue;
+            }
+            else stk.pop();
+        }
+    }
+
+    ans+=stk.size();
+
+    return ans;
+
+}
+
+
+
+
+
+/*
+Now try :
+https://www.codingninjas.com/codestudio/problems/next-smaller-element_1112581?leftPanelTab=0
+
+for this ques : next smaller element , time complexity : O(n).
+*/
 
 vector<int> nextSmallerEle(vector<int> v){
     int n = v.size();
@@ -47,9 +78,3 @@ int main(){
 }
 
 
-/*
-Now try :
-https://www.codingninjas.com/codestudio/problems/next-smaller-element_1112581?leftPanelTab=0
-
-for this ques : next smaller element , time complexity : O(n).
-*/

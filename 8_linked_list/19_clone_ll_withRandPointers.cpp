@@ -4,6 +4,7 @@
 #include<unordered_map>
 using namespace std;
 /*
+Good and imp question for interview.
 We have to clone a linked list with next as well as random pointers.(like one given in the screenshot).
 Now cloning a simple linked list is easy but not easy with random pointers also.
 WE CANNOT TEST THIS QUESTION HERE SO SEE LEETCODE FOR APPROACHES.
@@ -137,6 +138,8 @@ Node* cloneList(Node* head){
 Approach 3: Now, if we want to do it by not taking any extra space. that it SC: O(1).
             Then we have to do it by changing links.
             see screenshot attached for representation.
+            for O(1) mujhe map ko hatana padega. Agar mai origNode: cloneNode wala kaam links ke through
+            store kar saku to map wala kaam bina space liye he ho jayega.
 */
 //DONE ON: 
 // https://leetcode.com/problems/copy-list-with-random-pointer/submissions/

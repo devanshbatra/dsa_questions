@@ -1,5 +1,9 @@
 #include<iostream>
 using namespace std;
+//split circular linked list
+// https://practice.geeksforgeeks.org/problems/split-a-circular-linked-list-into-two-halves/1
+
+
 //implementing circular linked list
 class Node{
     public: 
@@ -91,6 +95,39 @@ void splitCyclic(Node* head, Node* & head1, Node*& head2){
     prev->next = head2;
 }
 
+//METHOD 2: without using previous.
+void splitList(Node *head, Node **head1_ref, Node **head2_ref)
+{
+    
+    if(head==NULL||head->next==head){
+        *head1_ref = head;
+        *head2_ref = head;
+        return;
+    }
+    
+    Node* fast = head;
+    Node* slow = head;
+    
+    //first breaking the circular linked list
+    Node* tail = head;
+    while(tail->next!=head) tail=tail->next;
+    
+    tail->next = NULL;
+    
+    while(fast!=NULL){
+        fast=fast->next;
+        if(fast!=NULL && fast->next!=NULL){ //important addition here.
+            fast=fast->next;
+            slow=slow->next;
+        }
+    }
+    
+    Node* temphead2= slow->next;
+    slow->next = head;
+    tail->next = temphead2;
+    *head1_ref = head;
+    *head2_ref = temphead2;
+}
 
 
 int main(){

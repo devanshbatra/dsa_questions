@@ -4,6 +4,8 @@
 using namespace std;
 // https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559
 
+//after doing this problem, try this: https://leetcode.com/problems/minimum-time-to-repair-cars/description/
+
 bool isPossibleSol(vector<int> a, int n, int m, int mid){
     int blSum=0, painterCount = 1;
     for(int i=0; i<n; i++){

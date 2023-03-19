@@ -1,13 +1,15 @@
 // to count the number of primes till the given number.
 // https://leetcode.com/problems/count-primes/
 
-// if we do by brute force approach then it will be n^2 time complexity and will give the
+// if we do by brute force approach then it will be n^2 time complexity and will give tle
 
 // so we use sieve of eratosthenes here
 // it works on eleminating/removing our search space values before proceeding to next steps.
 /*
 1. make the search space and mark every number as prime 
-2. ab starting 2 se shuru karo , jo prime ke table me aa rhe hai unko non prime mark kardo
+2. ab starting 2 se shuru karo , jo prime ke table me aa rhe hai unko non prime mark kardo. 
+// imp optimization: start marking non prime from square of the index you are on as usse kam
+// toh ham pehle he mark kar chuke honge.
 
 */
 #include <iostream>
@@ -27,7 +29,7 @@ int main(){
     for(int i=2; i<n; i++){
         if(prime[i]){
             count++;
-            for(int j=2; i*j<n; j++ ){
+            for(int j=2; i*j<n; j++ ){ //optimization: start j from i*i.
                 prime[i*j] = false;
             }
         }

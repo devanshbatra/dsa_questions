@@ -2,49 +2,81 @@
 #include <stack>
 using namespace std;
 
+class Stack{
+    public:
+        int *arr;
+        int top;
+        int size;
 
-
-void printStack(stack<int> s){
-    while(!s.empty()){
-        cout<<s.top()<<" ";
-        s.pop();
-    }cout<<endl;
-}
-
-
-int costToBal(string str){
-    stack<char> s;
-    int count = 0;
-    for(auto i: str){
-        if(i=='{') s.push(i);
-        else{
-            if(s.empty()){
-                count++;
-                s.push('{');
-            }else{ //as s.top() will now be opening only
-                s.pop();
-            }
+        Stack(int s){
+            size = s;
+            arr = new int[size];
+            top = -1;
         }
-    }
 
-    if(s.empty()) return 0;
-    else{
-        int size = s.size();
-        if(size%2==0) count+=(size/2);
-        else return -1;//not able to convert to valid string
-    }
+        void pushS(int data){
+            //check overflow
+            if(size-top<=1) {
+                cout<<"could not insert, stack overflow"<<endl;
+                return;
+            }
 
-    return count;
+            top++;
+            arr[top] = data;
+        }
 
-}
+        void popS(){
+            if(top==-1){
+                cout<<"could not pop, stack underflow"<<endl;
+                return;
+            }
 
+            top--;
+        }
+
+        int getSize(){
+            return top+1;
+        }
+
+        int topS(){
+            if(top==-1){
+                cout<<"array underflow"<<endl;
+                return -1;
+            }
+
+            return arr[top];
+
+        }
+
+        bool isEmpty(){
+            if(top==-1) return true;
+            else return false;
+        }
+
+
+
+};
 
 
 int main(){
 
-    string str = "{";
 
-    cout<<"The minimum cost to balance this string is: "<<costToBal(str);
+    Stack* s = new Stack(5);
+
+    s->pushS(6);
+    s->pushS(5);
+    s->pushS(4);
+    s->pushS(3);
+    s->pushS(2);
+
+    while(!s->isEmpty()){
+        cout<<s->topS()<<" ";
+        s->popS();
+    }
+
+
+
+
 
     return 0;
 }

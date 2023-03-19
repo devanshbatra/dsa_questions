@@ -2,6 +2,7 @@
 #include<unordered_map>
 using namespace std;
 //removing duplicates from an unsorted list.
+//https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
 /*
  here we have majorly 3 approaches:
 */

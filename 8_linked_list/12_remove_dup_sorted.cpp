@@ -75,7 +75,7 @@ void removeDuplicates(Node* & head){
             Node* temp = curr->next;
             curr-> next = curr->next->next;
             temp->next = NULL;
-            delete temp;
+            delete temp; //important step for interview perspective.
         }else{
             curr = curr->next;
         }

@@ -3,7 +3,7 @@
 // A) top down approach.
 // since here we have a single parameter needed for recursive call so, we will only use a single array(1D).
 // 1) make dp(array/map/table as per requirement) and initialize it.
-// 2) check if soln exist in dp after base case
+// 2) check if soln exist in dp after base case, if yes then return it.
 // 3) if not then save the solution returned , in dp.
 
 #include <iostream>

@@ -4,86 +4,150 @@ using namespace std;
 class Node{
     public:
         int data;
-        Node* prev;
         Node* next;
-        // constructor
-        Node(int d){
-            this->data = d;
-            this ->next = NULL;
-            this -> prev = NULL;
+
+        Node(int data){
+            this->data = data;
+            next = NULL;
         }
-        //destructor for handling delete keyword
-        ~Node(){
-            int value = data;
-            if(this->next!=NULL){
-                delete next;
-                this->next = NULL;
+
+        void insertAtHead(Node*& head, int data){
+            Node* temp = new Node(data);
+            if(head==NULL){
+                head = temp;
+                return;
             }
-            cout<<"Memory freed for node with value: "<<value<<endl;
+            temp->next = head;
+            head = temp;
         }
+
+        void insertAtEnd(Node*& head, int data){
+            Node* newnode = new Node(data);
+            if(head==NULL){
+                head = newnode;
+                return;
+            }
+            Node* temp = head;
+            while(temp->next!=NULL) temp=temp->next;
+            temp->next = newnode;
+        }
+
+
+        void insertAtMiddle(Node*& head, int data, int pos){
+            if(head==NULL){
+                insertAtHead(head, data);
+                return;
+            }
+
+            int currPos = 0;
+            Node* temp = head;
+
+            while(currPos<pos-1){
+                temp=temp->next;
+                currPos++;
+            }
+
+            if(temp->next==NULL) {
+                insertAtEnd(head, data);
+                return;
+            }
+
+            Node* newnode = new Node(data);
+            newnode->next = temp->next;
+            temp->next = newnode;
+        }
+
+
+        void printList(Node* head){
+            Node* temp = head;
+            if(head==NULL){
+                cout<<"empty list"<<endl;
+                return;
+            }
+            while(temp!=NULL){
+                cout<<temp->data<<endl;
+                temp=temp->next;
+            }
+        }
+
+
+
+        //deletion
+        void deleteAtHead(Node* & head){
+            if(head==NULL){
+                cout<<"cannot delete list is empty"<<endl;
+                return;
+            }
+
+            Node* todelete = head;
+            head = head->next;
+            delete todelete;
+
+        }
+
+        void deleteAtEnd(Node* & head){
+            if(head==NULL) {
+                cout<<"cannot delete"<<endl;
+                return;
+            }
+
+            if(head->next==NULL){
+                Node* todelete = head;
+
+                head=NULL;
+                delete todelete;
+                return;
+            }
+
+            Node* temp=head;
+            while(temp->next->next!=NULL){
+                temp=temp->next;
+            }
+            Node* todelete = temp->next;
+            temp->next = NULL;
+            delete todelete;
+
+        }
+
+
+        void deleteAtPos(Node*& head, int pos){
+            if(pos==0){
+                deleteAtHead(head);
+                return;
+            }
+            
+            Node* temp = head;
+            int currPos = 0;
+
+            while(currPos<pos-1){
+                temp=temp->next;
+                currPos++;
+            }
+            Node* todelete = temp->next;
+            temp->next = temp->next->next;
+            delete todelete;
+
+        }
+
 };
 
-//printing 
-void printList(Node* &head){
-    Node* temp = head;
-    while(temp!=NULL){
-        cout<<temp->data<<" ";
-        temp = temp->next;
-    }cout<<endl;
-}
-
-//insert
-void insertAtEnd(Node *& head, int d){
-    if(head==NULL){
-        Node * newnode = new Node(d);
-        head = newnode;
-        return;
-    }
-    Node * newnode = new Node(d);
-    //traversing to end
-    Node * temp  = head;
-    while(temp->next!=NULL) temp = temp ->next;
-
-    newnode->next = temp->next;
-    temp->next = newnode;
-    newnode->prev = temp;
-}
-//reverse
-void reverse(Node* &head, Node* curr, Node* prev){
-    
-    if(curr==NULL) {
-        head=prev;
-        return;
-    }
-
-    Node* temp = curr->next;
-    curr->next = prev;
-    curr->prev = temp;
-
-    //updating curr and prev
-    prev = curr;
-    curr = temp;
-
-    reverse(head, curr, prev);
-
-
-}
 
 int main(){
-    Node* head = NULL;
-    insertAtEnd(head, 5);
-    insertAtEnd(head, 3);
-    insertAtEnd(head, 8);
-    insertAtEnd(head, 1);
-    insertAtEnd(head, 0);
-    insertAtEnd(head, 2);
-    printList(head);
 
-    Node* prev=NULL;
-    Node* curr = head;
-    reverse(head, curr, prev);
-    cout<<"after reversal: "<<endl;
-    printList(head);
+    Node* head = NULL;
+
+    head->insertAtHead(head, 5);
+    head->insertAtHead(head, 6);
+    head->insertAtEnd(head, 7);
+    head->insertAtMiddle(head, 8, 1);
+    head->printList(head);
+
+
+    head->deleteAtPos(head, 3);
+    head->printList(head);
+
+
+
 
     return 0;
 }

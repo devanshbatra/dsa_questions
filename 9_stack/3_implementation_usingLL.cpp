@@ -1,6 +1,18 @@
 #include<iostream>
 using namespace std;
 
+//linked list is better option for implementing stack
+//push:
+//both take O(1) but for array the size would be a constraint and for linked list we can expand.
+//also space utilization for ll is better, vector mein bhi double krna pdta h expansion mein.
+
+//pop: array O(1).  singly linked list: O(N) but if we take doubly linked list which has a prev pointer too
+//the in linked list also the complexity for pop would be just O(1).
+
+//in c++ stl library the stack is implemented using deque(doubly ended queue).
+
+
+
 class Node{
     public:
         int data;

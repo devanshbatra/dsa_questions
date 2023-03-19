@@ -8,6 +8,8 @@ Heap is a complete binary tree that comes with a heap order property.
 complete binary tree - A complete binary tree is a binary tree in which all the levels are completely 
                         filled except possibly the lowest one, which is filled from the left.
                         see google images for more interpretation.
+                        You can try this question.
+                        https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
 
 Now there are two types of heap
 1) min heap - here we have the root as minimum element and at every node its children are greater than 

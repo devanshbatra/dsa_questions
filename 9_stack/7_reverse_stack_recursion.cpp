@@ -4,7 +4,7 @@
 using namespace std;
 //IMPORTANT QUESTION
 /*
-To reverse the linked list using recursion. - 
+To reverse the stack using recursion. - 
 -recently we have learnt how to insert an element at the bottom of the stack using recursion(in O(n))
 -so if we empty the stack and then start adding the element(jinko recursion ke time side
   mein rakha tha) , so that the last element will on the top.(bcoz sbse pehle usi ko insert at bottom kia hai)

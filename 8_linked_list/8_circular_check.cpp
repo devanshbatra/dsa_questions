@@ -129,7 +129,7 @@ int main(){
     //inserting in empty list
     insertAfterValue(tail, 5, 3);
     insertAfterValue(tail, 3, 5);
-    inertAfterValue(tail, 5, 6);
+    insertAfterValue(tail, 5, 6);
     insertAfterValue(tail, 6, 8); 
     insertAfterValue(tail, 3, 4);//inserted after 3
     insertAfterValue(tail, 8, 9);

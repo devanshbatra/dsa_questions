@@ -11,7 +11,7 @@
 */
 
 
-//for find the shortest path between source and destination in a WEIGHTED directed acyclic graph.
+//to find the shortest path between source and destination in a WEIGHTED directed acyclic graph.
 //directed acyclic se samajh jaana ki dist nikalne ke liye topological order use hoga.
 //MOTA MOTA
 // I) MAKE TOPO ORDER
