@@ -1,5 +1,5 @@
 //Dijkstra Algorithm is used to find the single source shortest path to all other nodes in a weighted
-	//undirected graph.
+	//undirected graph. (directed mein bhi chal jayega.).
 	//steps:
 	//since here there is no directions involved so we do not have to find the topological order, bas sabse min
     //wali edge ko uthao aur uske children ko ease karo, ab simple si baat h source se he shuru hoga because

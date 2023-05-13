@@ -92,6 +92,8 @@ vector <int> boundary(Node *root)
     if(root==NULL) return ans;
     
     ans.push_back(root->data);//so that baar baar root print na ho.
+    //ye step ye bhi ensure karega ki agar skewed tree hai to right ya left mein se ek chodna hai.
+    
     left(root->left, ans);
     
     //for left subTree

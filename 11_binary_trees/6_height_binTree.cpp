@@ -59,6 +59,10 @@ approach 2: in previous questions , we have done level order traversal. Remember
 
 */
 
+
+//DO THIS QUESTION ALSO: Max width of a binary tree.    
+// https://leetcode.com/problems/maximum-width-of-binary-tree/description/
+
 int height_1(Node* root){
     //base case
     if(root==NULL) return 0; //null ki to kya he height hogi
@@ -114,3 +118,5 @@ int main(){
 
     return 0;
 }
+
+

@@ -4,7 +4,7 @@ BELLMAN FORD ALGORITHM - this algorithm is used to find the shortest distance in
 
 -> But we already had dijkstra, then why do we need to have bellman ford algo
 -> Because dijkstra has a drawback that it could not be applied correctly when the graph also contain negative
-   weights. try finding from this example: [A, B, 5], [A, C, 6], [C, B, -3]. the shortes path from A to B can 
+   weights. try finding from this example: [A, B, 5], [A, C, 6], [C, B, -3]. the shortest path from A to B can 
    be find out using by travelling directly to B and through and both have different weights.
 
 -> But bellman form can find out the single source shortest path of graph with negative weights provided that

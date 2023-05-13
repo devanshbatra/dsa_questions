@@ -32,7 +32,7 @@ approach 2: This is a very efficient approach , here we will use each and every 
             4) freeSpot - this denotes the index which is free to use next.
 
 We are using all these structures to just store integer stacks in an array ?
---> No, we are using integer stacks for just easing the understanding, otherwise this technique is usefull
+--> No, we are using integer stacks for just easing the understanding, otherwise this technique is useful
     when we need to accomodate complex objects within an array. And these approaches are also used in OS.
 
 CONSTRUCTOR: first we will intitialize the structures.

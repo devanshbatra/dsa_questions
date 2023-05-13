@@ -17,10 +17,13 @@ will apply the pointer to the array itself.
 - now we analyse a balance petrol (balance = 0 initial), balance(at each step) = balance+ (petrol-dist).
 - if balance>=0 then going to next node is possible so rear = rear+1;
 - else if balance is neg. then the front needs to be relocated front = rear+1 and rear = rear+1 and reset bal = 0
+    because agar front se rear tak nhi pohocha to rear se pehle pehle agar kahi se start karenge to to nhi he phochega
 - now if front and rear again meet then this means it is possible to complete the path with front index
         as starting point.
 - front and rear can also go round the cycle like rear = (rear+1)%n.
 - else return -1.
+//this implementation you can find on : https://leetcode.com/problems/gas-station/description/
+//BUT DON'T SEE IT.
 
 
 approach 3(most optimised): we will use the same concept of approach 2 but instead of revisiting the cycle 

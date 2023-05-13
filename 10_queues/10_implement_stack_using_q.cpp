@@ -1,3 +1,7 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
 /*
 
 implement stack using queue:
@@ -49,5 +53,46 @@ int pop(struct Queue *q1)
 
 /*
 Approach 2: Using a single queue.
+Most optimal - just simple method. Do try to think what we want to mimic and do yourself.
 
 */
+
+ class MyStack {
+public:
+    queue<int> q;
+    MyStack() {
+        
+    }
+    
+    void push(int x) {
+        int n = q.size();
+
+        q.push(x);
+
+        while(n>0){
+            int ele = q.front();
+            q.pop();
+            q.push(ele);
+            n--;
+        }
+
+    }
+    
+    int pop() {
+        if(q.empty()) return -1;
+        int ans = q.front();
+        q.pop();
+        return ans;
+    
+    }
+    
+    int top() {
+        if(q.empty()) return -1;
+        return q.front();
+    }
+    
+    bool empty() {
+        return q.empty();
+    }
+};
+

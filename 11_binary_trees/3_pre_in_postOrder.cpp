@@ -82,8 +82,6 @@ void postOrderTrav(Node* root){
 void preorder_iter(Node* root){
 
     Node* temp = root;
-    queue<Node*> q;
-    q.push(root);
     stack<Node*> st;
     st.push(root);
     while(!st.empty()){
