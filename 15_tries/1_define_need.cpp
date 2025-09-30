@@ -6,8 +6,8 @@ WHY DO WE NEED TRIE?
                 2) search word
                 3) erase/remove word
     -We can do this using map.
-    but if we see the worst case where length of every word is l which is equavelent to number of words
-    then the complexity of hashing would O(l). so will be the complexity of adding, searching and removing.
+    but if we see the worst case where length of every word is L which is equavelent to number of words
+    then the complexity of hashing would O(L). so will be the complexity of adding, searching and removing.
 
 
     //A better approach is doing it by using tries.

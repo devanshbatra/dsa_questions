@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-// Painters partition problem - solved on codestudio
+// Painters partition problem - https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
 
 bool isPossibleSol(vector<int> a, int n, int m, int mid){
     int blSum=0, painterCount = 1;

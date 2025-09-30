@@ -1,5 +1,5 @@
 // takes input an binary unsigned integer and return the number of one bits in it
-
+// https://leetcode.com/problems/number-of-1-bits/description/
 #include <iostream>
 
 using namespace std;

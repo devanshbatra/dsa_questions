@@ -18,24 +18,26 @@ using namespace std;
 // isme har baar target variable change ho rha h, so 1d dp he lag jaayegi.
 
 // 1) recursion + memoization.
-int solveCombination(vector<int>& nums, int n, int target, vector<int>& dp){
+int solve(vector<int>& nums, int n, int target, int sum, vector<int>& dp){
     //base case
-    if(target==0){
-        return 1;
-    }
-    if(target<0) return 0;
-    if(dp[target]!=-1) return dp[target];
+    if(sum==target) return 1;
+
+    if(dp[sum]!=-1) return dp[sum];
     //rc
-    int ans = 0;
+    int ans =0;
     for(int i=0; i<n; i++){
-        //target mein se kam kar do
-        ans+=solveCombination(nums, n, target-nums[i], dp);
+        if(sum+nums[i]<=target) ans+=solve(nums, n, target, sum+nums[i], dp);
     }
-    return dp[target] = ans;
+
+    return dp[sum] = ans;
+
 }
+
+
 int combinationSum4(vector<int>& nums, int target) {
-    vector<int> dp(target+1, -1);
-    return solveCombination(nums, nums.size(), target, dp);
+    int n = nums.size();
+    vector<int> dp(200001, -1);
+    return solve(nums, n, target, 0, dp);
 }
 
 //time complexity: O(target). 

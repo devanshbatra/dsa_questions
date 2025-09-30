@@ -3,6 +3,9 @@
 // https://practice.geeksforgeeks.org/problems/minimum-swaps/1
 
 //approach:
+//hint: 
+//ulta chalo.
+
 //what we will do is :
     //store the vector in the form of vector of pair with pair as ele: index
     //now we will sort that vector<pair<int,int>> acc to first pair(default hai).

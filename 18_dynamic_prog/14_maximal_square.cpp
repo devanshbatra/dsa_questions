@@ -15,7 +15,7 @@ using namespace std;
 // at each node we will find answers from left, bottom and diagonal.
 // now at this node we will see if (currNode==0) return 0; //no continuity of 1. 1's cont. breaked.
 // BUT IF(currNode==1) that means some ans will be returned 
-// now we will see which side whether down , up or diagonal has least 1's in continuity.
+// now we will see which side whether down , right or diagonal has least 1's in continuity.
 // as square will be formed by joining all of down up and diagonal 1's so jo sabse chota hoga,
 // uske barabar+1(as wo node khud bhi to include hoga) ka he square banega.
 // Now to track the maximum square we will make a variable maxi which will track the maximum ans.

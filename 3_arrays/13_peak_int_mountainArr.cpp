@@ -1,4 +1,5 @@
 // find peak in mountain array
+// https://leetcode.com/problems/peak-index-in-a-mountain-array/
 #include <iostream>
 #include <vector>
 

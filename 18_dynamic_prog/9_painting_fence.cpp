@@ -9,6 +9,7 @@ approach: to under stand approach see ss.
 */
 //recursive+memoization.
 #define mod 1000000007
+#define ll long long
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -83,4 +84,55 @@ long long solve(int n, int k){
 
 long long countWays(int n, int k){
     return solve(n, k);
+}
+
+
+
+
+//alternate solution - done by me did by dry run on n = 3 , k=2
+long long solve(int n, int k, int i, int used, vector<vector<ll>> & dp){
+    //base case
+    if(i==n) return 1;
+    //rc
+    if(dp[i][used]!=-1) return dp[i][used];
+    ll use = 0, notUse = 0;
+    if(!used) use = 1* solve(n, k, i+1, 1, dp)%mod; //use the same as previous - only one way * solve(others)
+    notUse = (((k-1)%mod)*(solve(n, k, i+1, 0, dp)%mod))%mod; //not use the same as previous
+    return dp[i][used] = (use+notUse)%mod;
+}
+
+
+long long countWays(int n, int k){
+    // code here
+    vector<vector<ll>> dp(n, vector<ll>(2, -1));
+    return (k%mod*solve(n, k, 1, 0, dp)%mod)%mod;
+}
+
+
+//optimized - my solution
+long long solve(int n, int k){
+    ll next0 = 1;
+    ll next1 = 1;
+    
+    for(int i=n-1; i>=1; i--){
+        ll curr0, curr1;
+        for(int used=0; used<=1; used++){
+            ll use = 0, notUse = 0;
+            if(!used) use = (next1)%mod;
+            notUse = (((k-1)%mod)*(next0%mod))%mod;
+            if(used) curr1 = (use+notUse)%mod;
+            else curr0 = (use+notUse)%mod;
+        }
+        next0 = curr0;
+        next1 = curr1;
+    }
+    
+    
+    return next0;
+}
+
+
+long long countWays(int n, int k){
+    // code here
+    return (k%mod*solve(n, k)%mod)%mod;
 }

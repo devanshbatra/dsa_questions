@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/codestudio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTab=1
+// https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 
 // to find first and last occurance of the array
 #include<iostream>

@@ -3,6 +3,7 @@
 using namespace std;
 // book allocation problem
 // https://www.codingninjas.com/codestudio/problems/allocate-books_1090540?leftPanelTab=1
+// https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
 
 
 // my solution for isPossibleSolution 100% fast    
@@ -16,7 +17,7 @@ bool isPossibleSolution(vector<int> a, int n, int m, int mid){
                 break;
             }
             else{
-                pageSum += a[i];
+                pageSum += a[i];    
                 i++;
             }
         }

@@ -9,6 +9,9 @@ using namespace std;
 // aur end mein include aur exclude ke max ko return kar denge.
 // isme prev initially -1 rahega so dp array mein choda indexing mein change hoga.
 
+//after doing this do: 
+// https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/
+
 //recursion + memoization.
 int solve(vector<int>& nums, int n, int index, int prev, vector<vector<int>> & dp){
     //base case

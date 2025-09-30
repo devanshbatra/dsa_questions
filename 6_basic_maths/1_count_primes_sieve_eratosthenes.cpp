@@ -11,6 +11,9 @@
 // imp optimization: start marking non prime from square of the index you are on as usse kam
 // toh ham pehle he mark kar chuke honge.
 
+3. Another important optimization: no need to go from 2 to n. just go from 2 to sqrt(n).
+    Why? We saw na in previous videos that if we disable all the composite numbers using the primes
+    below sqrt(n) then after sqrt(n) only primes will remain and we have already marked them with true.
 */
 #include <iostream>
 #include <vector>
@@ -26,7 +29,7 @@ int main(){
     int count = 0;
     vector<bool> prime(n, true);
     
-    for(int i=2; i<n; i++){
+    for(int i=2; (i*i)<n; i++){
         if(prime[i]){
             count++;
             for(int j=2; i*j<n; j++ ){ //optimization: start j from i*i.

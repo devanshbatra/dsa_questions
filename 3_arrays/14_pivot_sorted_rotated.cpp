@@ -1,4 +1,5 @@
-// find pivot in sorted - rotated aay
+// find pivot in sorted - rotated array
+// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 #include <iostream>
 #include <vector>
 

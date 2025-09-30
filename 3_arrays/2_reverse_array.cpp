@@ -1,4 +1,8 @@
 // i knew the method by using two arrary but optimized solution is by using just one array
+
+
+//Try rotate an array after this: https://leetcode.com/problems/rotate-array/description/
+
 // Optimized solution: 
 #include <iostream>
 

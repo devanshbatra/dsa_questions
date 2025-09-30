@@ -52,6 +52,8 @@ approach:
     the number line with the node occuring. But But..here we will not store all
     the node occuring in that number of the no. line instead we will store the first
     of those which would be on the upper level and hence would be seen from top.
+    NOTE: Remember here we have to use the level order for find the vertical order as agar pre post wagarah use kie to
+    koi element jo pehle aana chahiye tha wo baad mein visit hoga.
 */
 
 vector<int> topView(Node *root)

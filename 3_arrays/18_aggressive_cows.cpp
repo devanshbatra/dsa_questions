@@ -3,6 +3,7 @@
 #include <algorithm>
 using namespace std;
 // https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559
+// https://www.geeksforgeeks.org/problems/aggressive-cows/1
 
 //after doing this problem, try this: https://leetcode.com/problems/minimum-time-to-repair-cars/description/
 

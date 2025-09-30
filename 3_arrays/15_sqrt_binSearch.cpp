@@ -1,4 +1,5 @@
-// Finding ssqrt using binary search
+// Finding ssqrt using binary search 
+// https://www.geeksforgeeks.org/problems/square-root-of-number-upto-given-precision/1
 /*
 we know that the ans of underroot n will lie between 0 to n
 so 0 to n is our SEARCH SPACE

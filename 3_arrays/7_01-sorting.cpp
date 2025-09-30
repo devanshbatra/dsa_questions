@@ -1,6 +1,7 @@
 // sorting an array containing only 0 and 1
-// Can be don in just o(n)
+// Can be done in just o(n)
 // Using TWO POINTER APPROACH
+// https://www.geeksforgeeks.org/problems/segregate-0s-and-1s5106/1
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -9,6 +10,7 @@ using namespace std;
 
 void printVec(vector<int> &a){
     for(int i=0; i<a.size(); i++){
+        
         cout<<a[i]<<" ";
     }
     cout<<endl;

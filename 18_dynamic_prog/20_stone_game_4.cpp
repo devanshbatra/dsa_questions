@@ -1,3 +1,5 @@
+//you can try this first: https://leetcode.com/problems/stone-game/description/
+
 // https://leetcode.com/problems/stone-game-iv/description/
 
 //recursion approach:
