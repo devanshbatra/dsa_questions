@@ -1,4 +1,5 @@
 // find all the duplicate elements in the array
+// https://leetcode.com/problems/find-all-duplicates-in-an-array/submissions/637848607/
 #include<iostream>
 #include<vector>
 #include<algorithm>

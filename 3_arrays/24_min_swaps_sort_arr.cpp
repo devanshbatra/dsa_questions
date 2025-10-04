@@ -7,10 +7,11 @@
 //ulta chalo.
 
 //what we will do is :
-    //store the vector in the form of vector of pair with pair as ele: index
-    //now we will sort that vector<pair<int,int>> acc to first pair(default hai).
-    //now we will see if sorted[i].second == i hai ya nhi means sabko unki original position pe pohocha denge.
-    //swap kar kar ke.
+    //store the vector in the form of vector of pair with pair as <ele: index>
+    //now we will sort that vector<pair<int,int>> acc to first element of the pair
+    //now we will see if sorted[i].second == i hai ya nhi. Agar nhi h toh sabko unki original position pe pohocha denge.
+    //swap kar kar ke. Once swapped, again check for ith position jab tak i ki position par original initial wala element na
+	//aa jaaye.
 #include<iostream>
 #include<vector>
 #include<algorithm>

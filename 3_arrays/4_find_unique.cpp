@@ -1,4 +1,4 @@
-// find all the uniwue elements in the array
+// find all the uniwue elements in the array. That don't have duplicates.
 #include<iostream>
 
 using namespace std;
@@ -16,9 +16,10 @@ void findUnique(int arr[], int n){
         if(flag==0) cout<<"element "<<arr[i]<<" at index "<<i<<" is unique"<<endl;
 
     }
-}
+} //O(n square)
 
-// another method - when only one unique element is present
+
+// alternate method - when only ONE unique element is present
 // when we xor two same elements we get 0
 // 5^5  = 0
 // and xor with 0 gives the same number

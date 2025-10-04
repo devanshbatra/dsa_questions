@@ -4,9 +4,14 @@
 using namespace std;
 class Solution {
 public:
-
+    // https://leetcode.com/problems/majority-element/
     //using moore's voting algorithm
     //This can be applied only if there is guarantee that some element is greater than n/2 times.
+
+    //read article after solving.
+    /* 
+        https://www.geeksforgeeks.org/theory-of-computation/boyer-moore-majority-voting-algorithm/
+    */
 
 
     int majorityElement(vector<int>& nums) {
@@ -28,4 +33,17 @@ public:
         return ele;
 
     }
+
+
+
+    //alternate solution by sorting
+
+    class Solution {
+        public:
+            int majorityElement(vector<int>& nums) {
+                sort(nums.begin(), nums.end());
+                return nums[(nums.size()-1)/2];
+
+            }
+        };
 };

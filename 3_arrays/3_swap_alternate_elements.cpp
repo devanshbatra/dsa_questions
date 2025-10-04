@@ -1,4 +1,4 @@
-// swap the alternate elements
+// swap the alternate elements in an array. (level: Easy)
 // arr = {1, 2, 3, 4, 5, 6}
 // swapped arr = {2, 1, 4, 3, 6, 5}
 #include<iostream>
