@@ -1,14 +1,14 @@
 // These are same as integer arrays but they strore characters instead
-// we can directly store the name or any thing by just cin and give output by just cout
-// Charaacter arrays do not accept spaces. we can just store string without spaces in it.
-// Space, tab and new line stops the cin
+// we can directly store the name or any thing by just taking input (cin) and give output by just giving a print command (cout)
+// Character arrays do not accept spaces. we can just store string without spaces in it.
+// Space, tab and new line stops the input (cin)
 // This array is terminated by a null character. \0
 
 
-// strings are somewhat similar but it represents a complete datatype with many functions in c++.
+// strings are somewhat similar but it represents a complete datatype with many supported functions.
 // string can also take spaces string st = "helo my name is devansh Batra"--> is completely valid
-// but cin cannot take  spaces
-// for cin to take spaces we use getLine(cin, variable_to_store, custom delimieter(optional parameter ));
+// but here as well input (cin) cannot take spaces
+// for c++, cin to input spaces within a string - we use getLine(cin, variable_to_store, custom delimieter(optional parameter ));
 
 #include <iostream>
 #include  <bits/stdc++.h>
@@ -32,7 +32,7 @@ int main(){
     }
     cout<<"The length of your string is: "<<count<<endl;
 
-    // inbuilt functions for character arrays and string
+    // inbuilt functions for character arrays and string for C++
     // length
     // char st[10];
     // int len = strlen(st);

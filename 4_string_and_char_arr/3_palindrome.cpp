@@ -1,3 +1,6 @@
+//To find wether a string is palindrome or not.
+// https://www.geeksforgeeks.org/problems/palindrome-string0817/1
+
 #include <iostream>
 using namespace std;
 

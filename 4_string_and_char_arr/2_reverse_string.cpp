@@ -1,4 +1,7 @@
+//reverse a string.
+// https://leetcode.com/problems/reverse-string/description/
 
+//two pointer approach - put one at start, one at end - and start swapping.
 #include <iostream>
 using namespace std;
 

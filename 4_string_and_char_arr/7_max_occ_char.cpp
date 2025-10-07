@@ -1,3 +1,5 @@
+// https://www.geeksforgeeks.org/problems/maximum-occuring-character-1587115620/1
+//to find the most frequent character in a string.
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,7 +14,7 @@ void printArr(vector<int> v){
 
 int main(){
     
-    string s = "MmMMMMmera naam jokerrrrrrr";
+    string s = "MmMMMMmeraaaa naam jokerrrrrrr";
 
     int n = s.length();
     

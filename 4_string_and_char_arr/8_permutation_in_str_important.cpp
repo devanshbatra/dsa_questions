@@ -1,4 +1,4 @@
-// submitted on leet code - permutation in string
+// permutation in strings
 // https://leetcode.com/problems/permutation-in-string/
 // uses sliding window concept and storing character count in arr of 26 wala concept
 #include <iostream>

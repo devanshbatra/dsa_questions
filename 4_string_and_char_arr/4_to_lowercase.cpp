@@ -1,7 +1,7 @@
 // converting a character to lowercaase
-// We also have an inbuilt function
-// called tolower and toupper - which is recommended
-// This is just to understand the concept
+// We also have an inbuilt functions in C++ called tolower() and toupper() - which is a recommended method
+
+// But this approach is just to understand the concept
 #include <iostream>
 using namespace std;
 

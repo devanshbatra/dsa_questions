@@ -1,7 +1,6 @@
 // String compression
 // https://leetcode.com/problems/string-compression/submissions/
 
-// 
 
 #include <iostream>
 #include <vector>

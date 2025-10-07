@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-palindrome/submissions/ 
+// https://leetcode.com/problems/valid-palindrome/ 
 
 // here the approach will be to to do three tasks
 // ignore non alohanumeric 
