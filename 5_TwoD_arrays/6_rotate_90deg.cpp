@@ -1,4 +1,5 @@
 // to rotate a matrix by 90deg
+// https://leetcode.com/problems/rotate-image/description/
 /*
 1 2 3       7 4 1
 4 5 6  ==>  8 5 2
@@ -6,57 +7,37 @@
 */
 
 /*
+Approach:   
 for this we need to first compute the transpose and then reverse every row.
 */
-#include <iostream>
+using namepace std;
 #include <vector>
+class Solution {
+public:
 
-using namespace std;
+    void reverseRow(vector<vector<int>>& matrix, int rowNumber, int cols){
 
+        int s = 0, e = cols-1;
 
-void swap(int &a, int &b){
-    int temp = a;
-    a=b;
-    b=temp;
-}
-
-void printMat(int a[10][10], int row, int col){
-    for(int i =0 ; i<row; i++){
-        for(int j=0;j<col; j++){
-            cout<<a[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-}
-
-int main(){
-
-    int a[10][10] = { {1,2,3}, {4,5,6}, {7,8,9} };
-    int row = 3, col= 3;
-
-    //performing transpose
-    for(int i=0;i<row; i++){
-        for(int j=i+1; j<row; j++){
-            swap(a[i][j], a[j][i]);
-        }
-    }
-
-    printMat(a, 3, 3);
-    cout<<endl;
-    //reversing every row 
-    for(int i=0;i<row;i++){
-
-        // ab ek ek row ke liye
-        int s=0, e=col-1;
         while(s<e){
-            swap(a[i][s], a[i][e]);
-            s++;
-            e--;
+            swap(matrix[rowNumber][s++], matrix[rowNumber][e--]);
         }
+
     }
 
-    cout<<"rotated matrix: "<<endl;
-    printMat(a, 3, 3);
+    void rotate(vector<vector<int>>& matrix) {
+        
+        int row = matrix.size();
+        int col = matrix[0].size();
 
-    return 0;
-}
+        for(int i=0; i<row; i++){
+            for(int j = i+1; j<col; j++){
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+
+        for(int r = 0; r<row; r++) reverseRow(matrix, r, col);
+
+
+    }
+};

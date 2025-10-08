@@ -1,4 +1,4 @@
-// babbr lec 29
+// Jagged array implementation for c++. (search "gfg jagged array" on google)
 // jagged array is the array in which every row has different number of elements
 #include <iostream>
 
